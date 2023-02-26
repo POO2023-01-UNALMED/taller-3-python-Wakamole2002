@@ -26,8 +26,8 @@ class TV:
         if (self._estado and (0<= self._volumen<=7)):
             self._volumen = volumen
     @classmethod
-    def setNumTV(cls, num):
-        cls._numTV = num
+    def setNumTV(cls, numTV):
+        cls._numTV = numTV
 
     #Getters
     def getMarca(self):
@@ -45,6 +45,7 @@ class TV:
     @classmethod
     def getNumTV(cls):
         return cls._numTV
+    
     #Encender y apagar
     def turnOn(self):
        self._estado = True
@@ -53,10 +54,10 @@ class TV:
     
     #Subir y bajar canal
     def canalUp(self):
-       if (self._estado) and (self._canal<120):
+       if (self._estado) and (1<= self._canal<120):
             self._canal += 1
     def canalDown(self):
-       if (self._estado) and (self._canal>1):
+       if (self._estado) and (1< self._canal <=120 ):
           self._canal -= 1 
     
     #SUbir y bajar volumen
