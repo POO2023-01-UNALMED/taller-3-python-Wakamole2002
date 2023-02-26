@@ -8,7 +8,7 @@ class TV:
         self._volumen = 1
         self._precio = 500
         self._control = Control()
-        self._numTV += 1
+        TV._numTV += 1
 
     #Setters
     def setMarca(self, marca):
